@@ -1,55 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Expense Splitter App</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #111; }
-        h3 { margin-top: 30px; color: #222; }
-        p, li { font-size: 16px; color: #444; }
-        ul { padding-left: 20px; }
-        .footer { margin-top: 50px; font-size: 14px; color: #777; border-top: 1px solid #eee; padding-top: 20px; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your App Name</title>
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #f3f6f1;
+  --fg: #16231b;
+  --muted: #55655a;
+  --accent: #1f7a4d;
+  --accent-fg: #ffffff;
+  --line: #d3ddd4;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121a15; --fg: #e8f0ea; --muted: #9db0a2; --accent: #4fc08a; --accent-fg: #0c1a12; --line: #2a3a2f;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121a15; --fg: #e8f0ea; --muted: #9db0a2; --accent: #4fc08a; --accent-fg: #0c1a12; --line: #2a3a2f;
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Trebuchet MS", "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 34rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+.icon {
+  width: 5rem; height: 5rem;
+  border-radius: 1.4rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+  display: grid; place-items: center;
+  font-size: 2.2rem; font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+h1 { font-size: clamp(2.2rem, 8vw, 3.2rem); line-height: 1.1; margin: 0 0 1rem; letter-spacing: -0.02em; }
+p.lede { font-size: 1.15rem; color: var(--muted); margin: 0 0 2rem; max-width: 30rem; }
+.btn {
+  align-self: flex-start;
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-fg);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.7rem;
+}
+.btn:hover { filter: brightness(1.08); }
+a:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+footer a { color: var(--fg); }
+</style>
 </head>
 <body>
-
-    <h1>Privacy Policy</h1>
-    <p><strong>Last updated:</strong> 30 September 2026</p>
-
-    <p>This privacy policy governs your use of the mobile software application (the "Application") for Android devices. The Application is a utility tool designed to calculate proportional expense contributions based on user-entered text and income figures.</p>
-
-    <h3>1. Information Collection and Use</h3>
-    <p>The Application does not collect, transmit, distribute, sync, or store any personal or financial information. To use the Application, you may enter:</p>
-    <ul>
-        <li>Names or alternative text identifiers for contributors</li>
-        <li>Monthly income figures</li>
-        <li>Monthly expense amounts</li>
-    </ul>
-
-    <h3>2. Local Processing Only</h3>
-    <p>All calculations and data entered into the Application are processed <strong>strictly on your local device</strong> in temporary memory.</p>
-    <ul>
-        <li><strong>No Server Storage:</strong> Your data is never sent to an external server, developer, or any third party.</li>
-        <li><strong>No Session Persistence:</strong> None of the entered information is saved to your device’s permanent storage. Once the Application is closed or reset, all entered information is permanently erased from the device's temporary memory.</li>
-    </ul>
-
-    <h3>3. Third-Party Access</h3>
-    <p>Because the Application does not collect, track, or store any data, no third-party services have access to your information through this Application. There are no advertising networks, analytics trackers, or crash-reporting SDKs embedded in the Application.</p>
-
-    <h3>4. Children’s Privacy</h3>
-    <p>We do not use the Application to knowingly solicit data from or market to children under the age of 13. Since no user data is collected or transmitted, no child's data is ever at risk of exposure.</p>
-
-    <h3>5. Changes to This Privacy Policy</h3>
-    <p>We may update our Privacy Policy from time to time to reflect future app features (such as adding optional local storage functionality). We will notify you of any changes by updating this page with the new text and updating the "Last updated" date at the top.</p>
-
-    <h3>6. Contact Us</h3>
-    <p>If you have any questions regarding privacy while using the Application, please contact us via email at <strong>[INSERT_YOUR_CONTACT_EMAIL]</strong>.</p>
-
-    <div class="footer">
-        <p>&copy; 2026 [INSERT_YOUR_NAME_OR_DEVELOPER_NAME]. All rights reserved.</p>
-    </div>
-
+<main>
+  <div class="icon" aria-hidden="true">A</div>
+  <h1>Fair Share</h1>
+  <p class="lede">Simple contribution calculator for household expenses.</p>
+  <!-- <a class="btn" href="https://play.google.com/store/apps/details?id=com.example.yourapp">Get it on Google Play</a> -->
+</main>
+<footer>
+  <a href="https://mslocombe.github.io/fair-share-pages/privacy">Privacy policy</a>
+</footer>
 </body>
 </html>
